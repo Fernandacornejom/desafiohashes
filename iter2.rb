@@ -13,11 +13,8 @@ Noviembre: 91000,
 Diciembre: 21000
 }
 
-#seected_sales = ventas.select do |key, value|
-#    value > 45000
-#end
+selected_sales = ventas.select do |month, sale|
+    sale > 45000
+end
 
-#print seected_sales.values 
-ventas.each do |key, value|
-    print "#{value}\s" if value > 45000
-end 
+print selected_sales.keys
